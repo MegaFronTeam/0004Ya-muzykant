@@ -1,0 +1,21 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			+e.slider--js
+				- for (var x = 0; x < 6; x++)
+					+e.slide
+						+e.item.bg-wrap
+							+pic("headerBlock-1.jpg", 'bg', 0).picture-bg
+							+e.content
+								h2 Сэкономьте до&nbsp;#[span.text-primary 30% бюджета] на&nbsp;закупке систем оповещения и&nbsp;трансляции
+								p За&nbsp;счет наших эксклюзивных скидок у&nbsp;поставщиков и&nbsp;производителей
+								ul
+									li Бюджетных учреждений
+									li Спортивных объектов
+									li Офисов и&nbsp;коммерческих объектов
+									li Для торговых центров
+									li Школ и&nbsp;ВУЗов
+									li И&nbsp;любых других
+								+e.btn.btn.btn-primary(href="#") Подробнее
+	// end headerBlock
