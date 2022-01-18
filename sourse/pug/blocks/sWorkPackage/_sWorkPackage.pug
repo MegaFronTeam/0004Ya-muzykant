@@ -1,0 +1,28 @@
+mixin sWorkPackage(data)
+	// start sWorkPackage
+	+b.SECTION.sWorkPackage.section#sWorkPackage&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Весь комплекс работ
+				p Ваши комфорт и&nbsp;спокойстиве в&nbsp;приоритете&nbsp;&mdash; берем на&nbsp;себя решение всех задач от&nbsp;и&nbsp;до
+			.row
+				mixin sWorkPackageItem(i, t)
+					.col-sm-6.col-lg-4
+						+e.item
+							+icon(`sWorkPackage-${i}`)
+							p!= t
+				+sWorkPackageItem(1, `Подбор оборудования <br> под Ваш бюджет`)
+				+sWorkPackageItem(2, `Подготовка сопроводительной и&nbsp;проектной документации`)
+				+sWorkPackageItem(3, `Поиск дополнительного оборудования`)
+				+sWorkPackageItem(4, `Доставка до&nbsp;дверей. <br> Бесплатно`)
+				+sWorkPackageItem(5, `Монтажные <br> и&nbsp;пуско-наладочные работы`)
+				+sWorkPackageItem(6, `Обучение персонала и&nbsp;дальнейшая поддержка Вашего объекта`)
+			+e.footer
+				.row
+					.col
+						h3 У вас другая задача?
+						p Мы&nbsp;точно сможем поставить оборудование и&nbsp;для нее. 
+							a(href="#") Почему?
+					.col-md-6.col-lg-auto.text-center
+						+e.btn.btn.btn-primary Получить индивидуальное КП
+	// end sWorkPackage

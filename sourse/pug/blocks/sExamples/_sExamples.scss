@@ -12,9 +12,13 @@
 		padding: rem(30) rem(20);
 		background-color: $white;
 		box-shadow: 0px 4px 6px rgba(197, 189, 186, 0.25);
-		border-radius: 2px;
+		border-radius: $border-radius;
 		margin-top: rem(20);
+		max-width: rem(360);
+		margin-left: auto;
+		margin-right: auto;
 		@include media-breakpoint-up(sm) {
+			max-width: 100%;
 			padding: rem(20) rem(30) rem(20) rem(20);
 		}
 	}
@@ -31,7 +35,7 @@
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-		max-width: rem(300);
+		max-width: 100%;
 
 		@include media-breakpoint-up(sm) {
 			max-width: rem(140);
@@ -63,8 +67,11 @@
 		height: 100%;
 		align-items: center;
 		flex-wrap: wrap;
-		justify-content: flex-end;
+		justify-content: space-between;
 		margin-top: calc(-1 * var(--bs-gutter-y));
+		@include media-breakpoint-up(sm) {
+			justify-content: flex-end;
+		}
 		@include media-breakpoint-up(lg) {
 			margin-top: 0;
 			flex-direction: column;
@@ -92,12 +99,18 @@
 			color: $primary;
 			white-space: nowrap;
 			margin-bottom: 0;
+			width: 100%;
+			text-align: right;
+			@include media-breakpoint-up(sm) {
+				text-align: left;
+				width: auto;
+			}
 		}
 	}
 
 	&__btn-order {
 		width: 100%;
-		@media (min-width: 375px) {
+		@include media-breakpoint-up(sm) {
 			width: rem(125);
 			max-width: 100%;
 		}

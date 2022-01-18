@@ -602,3 +602,10 @@ iframe {
 		box-shadow: none;
 	}
 }
+
+.btn {
+	@include media-breakpoint-down(md) {
+		padding-top: rem(10);
+		padding-bottom: rem(10);
+	}
+}
