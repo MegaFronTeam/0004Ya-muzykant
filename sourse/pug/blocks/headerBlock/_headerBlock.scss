@@ -1,8 +1,17 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
+	--sPT: #{rem(60 * 0.5)};
+	--sPB: #{rem(45 * 0.5)};
+	// --sTPB: #{rem(40 * 0.5)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(60)};
+		--sPB: #{rem(45)};
+		// --sTPB: #{rem(40)};
+	}
+
+	// margin-bottom: 1px;
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
 
@@ -15,7 +24,6 @@
 		margin-bottom: rem(8);
 	}
 	
-
 	&__item {
 		position: relative;
 		padding: 5%;
@@ -78,6 +86,22 @@
 	&__btn {
 		width: rem(136);
 		max-width: 100%;
+	}
+
+	.slick-arrow {
+		// @include media-breakpoint-down(sm) {
+		// 	display: none;
+		// }
+		// &--next {
+		// 	@media (min-width: 1260px) {
+		// 		right: calc(-1 * var(--btnWidth) * 1.5);
+		// 	}
+		// }
+		// &--prev {
+		// 	@media (min-width: 1260px) {
+		// 		left: calc(-1 * var(--btnWidth) * 1.5);
+		// 	}
+		// }
 	}
 
 	@include media-breakpoint-up(xl) {

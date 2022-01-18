@@ -362,6 +362,8 @@ function eventHandler() {
 		dots: true,
 		// prevArrow: $('.slick-arrow.left'),
 		// nextArrow: $('.slick-arrow.right'),
+		prevArrow: '<button type="button" class="slick-arrow--prev"><svg class="icon icon-arrow-left "><use xlink:href="img/svg/sprite.svg#arrow-left"></use></svg></button>',
+		nextArrow: '<button type="button" class="slick-arrow--next"><svg class="icon icon-arrow-right "><use xlink:href="img/svg/sprite.svg#arrow-right"></use></svg></button>'
 	});
 
 };
