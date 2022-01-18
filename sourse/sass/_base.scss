@@ -118,6 +118,11 @@ body {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .mono {

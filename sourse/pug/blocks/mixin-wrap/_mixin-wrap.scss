@@ -77,3 +77,42 @@
 		}
 	}
 }
+
+.sLogoSlider {
+	// &__slider {
+	// }
+	.slick-list {
+		margin: rem(-10);
+	}
+	.slick-track {
+		display: flex;
+	}
+	&__slide {
+		height: auto;
+		margin: rem(10);
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: rem(20);
+		background-color: $white;
+		height: 100%;
+		box-shadow: 0px 4px 6px rgba(197, 189, 186, 0.25);
+		border-radius: 2px;
+		img {
+			@include mt;
+		}
+		&:not(:hover) {
+			img {
+				filter: saturate(0);
+				opacity: 0.5;
+			}
+		}
+		picture {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+} // end.sLogoSlider
