@@ -1,0 +1,20 @@
+mixin sExamplesBanner(data)
+	// start sExamplesBanner
+	+b.SECTION.sExamplesBanner.section#sExamplesBanner&attributes(attributes)
+		.container
+			.row
+				.col
+					+b.section-title
+						h2 Хотите увидеть примеры выполненных проектов?
+						p Оставьте свои контакты и&nbsp;мы&nbsp;пришлем Вам презентацию и&nbsp;закрепим за&nbsp;Вами персональную скидку
+						+e.btn.btn.btn-primary Получить презентацию и скидку
+				.col
+					+e.images
+						+e.img-wrap
+							+pic(`sExamplesBanner-1.jpg`, 'bg', 0)
+						+e.img-wrap
+							+pic(`sExamplesBanner-2.jpg`, 'bg', 0)
+						+e.img-wrap
+							+pic(`sExamplesBanner-3.jpg`, 'bg', 0)
+
+	// end sExamplesBanner

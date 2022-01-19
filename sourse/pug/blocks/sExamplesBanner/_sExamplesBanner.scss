@@ -1,0 +1,43 @@
+// start .sExamplesBanner
+.sExamplesBanner {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	background-color: #f0e7e3;
+	&__images {
+		display: flex;
+	}
+	&__img-wrap {
+		width: rem(216);
+		margin-left: 1.5px;
+		margin-right: 1.5px;
+		transform: skewX(-20deg);
+		overflow: hidden;
+		picture {
+			position: relative;
+			height: 330px;
+			img {
+				position: absolute;
+				top: 0;
+				left: -40%;
+				transform: skewX(20deg);
+				max-width: unset;
+				width: 180%;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sExamplesBanner
