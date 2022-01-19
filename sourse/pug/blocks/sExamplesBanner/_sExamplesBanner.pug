@@ -1,14 +1,14 @@
 mixin sExamplesBanner(data)
 	// start sExamplesBanner
-	+b.SECTION.sExamplesBanner.section#sExamplesBanner&attributes(attributes)
+	+b.SECTION.sExamplesBanner#sExamplesBanner&attributes(attributes)
 		.container
 			.row
-				.col
+				.col-xl.col-lg-5.col.section
 					+b.section-title
 						h2 Хотите увидеть примеры выполненных проектов?
 						p Оставьте свои контакты и&nbsp;мы&nbsp;пришлем Вам презентацию и&nbsp;закрепим за&nbsp;Вами персональную скидку
-						+e.btn.btn.btn-primary Получить презентацию и скидку
-				.col
+						+e.btn.btn.btn-primary(href="#") Получить презентацию и скидку
+				.col-xl.col-lg-7
 					+e.images
 						+e.img-wrap
 							+pic(`sExamplesBanner-1.jpg`, 'bg', 0)

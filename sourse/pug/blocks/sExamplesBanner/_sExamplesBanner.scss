@@ -1,30 +1,51 @@
 // start .sExamplesBanner
 .sExamplesBanner {
-	// --sPT: ;
-	// --sPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: 20px;
+	}
+	--sPB: 20px;
 	// --sTPB: ;
 	background-color: #f0e7e3;
+	.section{
+		align-self: center;
+	}
 	&__images {
 		display: flex;
+		min-height: 100%;
+	}
+	.row{
+		// align-items: center;
 	}
 	&__img-wrap {
 		width: rem(216);
 		margin-left: 1.5px;
 		margin-right: 1.5px;
-		transform: skewX(-20deg);
+		position: relative;
+		@include media-breakpoint-up(lg) {
+			transform: skewX(-20deg) translateX(30px);
+		}
 		overflow: hidden;
+		min-height: rem(330);
+		// height: 100%;
 		picture {
-			position: relative;
-			height: 330px;
+			// position: relative;
+			// height: 100%;
 			img {
 				position: absolute;
 				top: 0;
 				left: -40%;
-				transform: skewX(20deg);
+				@include media-breakpoint-up(lg) {
+					transform: skewX(20deg);
+				}
 				max-width: unset;
 				width: 180%;
+
 			}
 		}
+	}
+	&__btn{
+		width: 100%;
+		max-width: rem(360);
 	}
 	@include media-breakpoint-up(xl) {
 	}

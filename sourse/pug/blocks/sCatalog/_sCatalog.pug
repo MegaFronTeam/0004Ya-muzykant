@@ -1,3 +1,13 @@
+mixin prod-item(i,t,count)
+	.col-lg-4.col-sm-6
+		+b.prod-item(href="#")
+			+pic(`prod-${i}.png`,'',0)
+			+e.caption
+				+e.count= count
+				+e.title!= t
+	// /.col-lg-4.col-sm-6
+
+
 mixin sCatalog(data)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
@@ -8,9 +18,30 @@ mixin sCatalog(data)
 				p Ut&nbsp;elit magna deserunt consequat&nbsp;id. Pariatur eu&nbsp;amet dolor excepteur. Aliquip Lorem commodo sit laboris excepteur ex&nbsp;labore nisi. Magna labore consectetur voluptate amet do&nbsp;culpa excepteur occaecat aliqua. Non consequat veniam do&nbsp;qui exercitation excepteur aliqua. 
 					a(href="#") Читать далее
 			.row
-				.col-lg-3
 
 				.col-lg-9
+					+e.row.row
+						- for (var x = 0; x < 2; x++)
+							+prod-item(`1`,`Микрофоны на&nbsp;&laquo;гусиной шее&raquo;`,`83`)
+							+prod-item(`2`,`Микрофонные консоли`,`28`)
+							+prod-item(`3`,`Поверхностные микрофоны`,`48`)
+				.col-lg-3.order-lg-first
+					+b.aside
+						ul
+							mixin a(i ,t)
+								li: a(href="#")&attributes(attributes) 
+									+e.img-wrap
+										img.img-to-svg-js(src=`img/svg/cat-${i}.svg`, alt="")
+									!= t
+									+icon("arrow-right")
+							+a(`1`,`Громкоговорители <br> (751)`).active
+							+a(`2`,`Микрофоны систем оповещения (159)`)
+							+a(`3`,`Усилители мощности <br> (350)`)
+							+a(`4`,`Речевое оповещение <br> (314)`)
+							+a(`5`,`19 дюймовое оборудование (507)`)
+						+e.btn(href="#").btn-primary Получить комплекты на e-mail
+						+e.btn(href="#").btn-outline-primary Примеры комплектов 
+			+e.btn(href="#") Перейти в каталог
 			+e.footer
 				h2 Только лучшие торговые марки
 				p Дикстен - официальный представитель в России
