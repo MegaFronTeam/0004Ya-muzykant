@@ -1,0 +1,21 @@
+mixin sPlan(data)
+	// start sPlan
+	+b.SECTION.sPlan.section#sPlan&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Схема работы
+			.row
+				mixin sPlanItem(i, t)
+					+e.col.col-12.col-sm-6.col-md-4.col-lg
+						+e.item
+							+e.img-wrap
+								+icon(`sPlan-${i}`)
+							p!= t
+						+icon(`arrow-right-lg`)
+
+				+sPlanItem(1, `Озвучьте Ваши пожелания`)
+				+sPlanItem(2, `Получите индивидуальное&nbsp;КП`)
+				+sPlanItem(3, `Согласование, доработка. Получите оптимальное&nbsp;КП`)
+				+sPlanItem(4, `Оплата <br> счета`)
+				+sPlanItem(5, `Доставка, монтаж <br> и&nbsp;настройка оборудования`)
+	// end sPlan
