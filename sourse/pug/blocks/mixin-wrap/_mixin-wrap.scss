@@ -1,5 +1,5 @@
 .soc {
-	@include roww(10px, m);
+	@include roww(16px, m);
 	display: flex;
 	&__item {
 		text-decoration: none !important;
@@ -13,7 +13,7 @@
 		}
 	}
 	.icon {
-		font-size: rem(30);
+		font-size: rem(24);
 	}
 }
 
