@@ -1,9 +1,29 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+		+e.wrapper.bg-wrap
+			+pic(`sForm-bg.jpg`, 'bg', 0).picture-bg
+			.container
+				.row
+					.col-lg-7.col-xl-8
+						+e.content
+							+b.section-title
+								h2 Парнерская программа
+								p Мы&nbsp;всегда открыты к&nbsp;новым сотрудничествам и&nbsp;партнерствам!
+							p Сегодня, помимо сотрудничества по&nbsp;договорам оптовых поставок, мы&nbsp;готовы предложить Партнерскую программу, совершенно в&nbsp;новом ключе&nbsp;&mdash; программу по&nbsp;привлечению клиентов и&nbsp;заказов.
+							p #[span.strong 1.] Ваша агентская комиссия составит до&nbsp;20-25% от&nbsp;суммы приведенного заказа.
+							p #[span.strong 2.] Размер агентской комиссии фиксируется в&nbsp;договоре, и&nbsp;выплачивается удобным для Вас способом, а&nbsp;также&nbsp;&mdash; Вы&nbsp;всегда можете получить вознаграждение продукцией нашей компании.
+							p #[span.strong 3.] Процент данной комиссии накопительный, чем больше объем закупок от&nbsp;приведенных Вами клиентов, тем больше будет размер Вашего вознаграждения.
+							p Для обсуждения деталей сотрудничества&nbsp;&mdash; отправьте заявку или позвоните нам по&nbsp;телефону&nbsp;
+								a.strong(href="tel:+74956611493") +7&nbsp;(495)&nbsp;661-14-93
+							a.strong(href="#") Подробнее о&nbsp;программе
+
+					.col-lg-5.col-xl-4
+						+form-wrap
+							h2 Связаться с нами
+							+input('', 'text', 'Ваше имя')
+							+input('', 'tel', 'Номер телефона')
+							+input('', 'email', 'E-mail')
+							+policy()
+							+e.btn.btn.btn-outline-primary Отправить
 	// end sForm
