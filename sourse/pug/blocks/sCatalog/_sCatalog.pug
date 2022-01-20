@@ -1,5 +1,5 @@
 mixin prod-item(i,t,count)
-	.col-lg-4.col-sm-6
+	.col-md-4.col-sm-6
 		+b.prod-item(href="#")
 			+pic(`prod-${i}.png`,'',0)
 			+e.caption
@@ -16,20 +16,16 @@ mixin sCatalog(data)
 				h2 Системы оповещения
 				p Все необходимое оборудование для полной реализации систем оповещения и&nbsp;трансляции.
 				p Ut&nbsp;elit magna deserunt consequat&nbsp;id. Pariatur eu&nbsp;amet dolor excepteur. Aliquip Lorem commodo sit laboris excepteur ex&nbsp;labore nisi. Magna labore consectetur voluptate amet do&nbsp;culpa excepteur occaecat aliqua. Non consequat veniam do&nbsp;qui exercitation excepteur aliqua. 
-					a(href="#") Читать далее
-			.row
-
-				.col-lg-9
-					+e.row.row
-						- for (var x = 0; x < 2; x++)
-							+prod-item(`1`,`Микрофоны на&nbsp;&laquo;гусиной шее&raquo;`,`83`)
-							+prod-item(`2`,`Микрофонные консоли`,`28`)
-							+prod-item(`3`,`Поверхностные микрофоны`,`48`)
-				.col-lg-3.order-lg-first
+					a(href="#").readmore-js Читать далее
+				.hidden-text
+					p Ut&nbsp;elit magna deserunt consequat&nbsp;id. Pariatur eu&nbsp;amet dolor excepteur. Aliquip Lorem commodo sit laboris excepteur ex&nbsp;labore nisi. Magna labore consectetur voluptate amet do&nbsp;culpa excepteur occaecat aliqua. Non consequat veniam do&nbsp;qui exercitation excepteur aliqua. 
+					p Ut&nbsp;elit magna deserunt consequat&nbsp;id. Pariatur eu&nbsp;amet dolor excepteur. Aliquip Lorem commodo sit laboris excepteur ex&nbsp;labore nisi. Magna labore consectetur voluptate amet do&nbsp;culpa excepteur occaecat aliqua. Non consequat veniam do&nbsp;qui exercitation excepteur aliqua. 
+			.tabs.row
+				.col-xl-3.col-lg-4
 					+b.aside
-						ul
+						ul.tabs__caption
 							mixin a(i ,t)
-								li: a(href="#")&attributes(attributes) 
+								li.tabs__btn&attributes(attributes): a(href="#")
 									+e.img-wrap
 										img.img-to-svg-js(src=`img/svg/cat-${i}.svg`, alt="")
 									!= t
@@ -41,6 +37,20 @@ mixin sCatalog(data)
 							+a(`5`,`19 дюймовое оборудование (507)`)
 						+e.btn.btn(href="#").btn-primary Получить комплекты на e-mail
 						+e.btn.btn(href="#").btn-outline-primary Примеры комплектов 
+
+				.col-xl-9.col-lg-8
+					mixin c()
+						.tabs__content&attributes(attributes)
+							+e.row.row
+								- for (var x = 0; x < 2; x++)
+									+prod-item(`1`,`Микрофоны на&nbsp;&laquo;гусиной шее&raquo;`,`83`)
+									+prod-item(`2`,`Микрофонные консоли`,`28`)
+									+prod-item(`3`,`Поверхностные микрофоны`,`48`)
+					+c.active
+					+c
+					+c
+					+c
+					+c
 			+e.btn.btn.btn-primary(href="#") Перейти в каталог
 			+e.footer
 				h2 Только лучшие торговые марки

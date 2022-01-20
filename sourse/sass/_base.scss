@@ -351,11 +351,11 @@ ul {
 	}
 
 	&__content {
-		opacity: 0;
-		@include mt;
+		// opacity: 0;
+		// @include mt;
 		&.active {
 			display: block;
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		display: none;
@@ -565,19 +565,19 @@ iframe {
 	border-radius: 2px;
 
 	&:hover {
-		background-color: #f2824d;
-		border-color: #f2824d;
+		background-color: #f2824d !important;
+		border-color: #f2824d !important;
 		box-shadow: none;
 	}
 	&:active,
 	&.active {
-		background-color: #b94a16;
-		border-color: #b94a16;
+		background-color: #b94a16 !important;
+		border-color: #b94a16 !important;
 		// box-shadow: none;
 	}
 	&:focus {
-		background-color: #b94a16;
-		border-color: #b94a16;
+		background-color: #b94a16 !important;
+		border-color: #b94a16 !important;
 		box-shadow: none;
 	}
 	&:focus:active {
@@ -587,22 +587,23 @@ iframe {
 .btn-outline-primary {
 	background-color: $white;
 	&:hover {
-		color: $white;
-		background-color: #f2824d;
-		border-color: #f2824d;
+		 
+		background-color: #f2824d !important;
+		border-color: #f2824d !important;
 		box-shadow: none;
+		color: $white !important;
 	}
 	&:active,
 	&.active {
-		color: $white;
-		background-color: #b94a16;
-		border-color: #b94a16;
+		color: $white !important;
+		background-color: #b94a16 !important;
+		border-color: #b94a16 !important;
 		// box-shadow: none;
 	}
 	&:focus {
-		color: $white;
-		background-color: #b94a16;
-		border-color: #b94a16;
+		color: $white !important;
+		background-color: #b94a16 !important;
+		border-color: #b94a16 !important;
 		box-shadow: none;
 	}
 	&:focus:active {

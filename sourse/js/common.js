@@ -174,7 +174,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -318,6 +318,13 @@ function eventHandler() {
 			}, 'xml');
 		}
 	});
+
+
+	$(document).on('click',".readmore-js", function(e){
+		e.preventDefault();
+		$(this).hide();
+		$(".hidden-text").slideToggle();
+	})
 
 };
 if (document.readyState !== 'loading') {

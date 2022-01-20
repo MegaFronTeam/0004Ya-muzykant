@@ -68,7 +68,7 @@
 	filter: drop-shadow(0px 4px 6px rgba(197, 189, 186, 0.25));
 	min-height: 100%;
 	&:hover{
-		filter: drop-shadow(0px 4px 15px rgba(197, 189, 186, 0.4));
+		filter: drop-shadow(0px 4px 15px rgba(197, 189, 186, 0.6));
 	}
 	picture{
 		height: 190px;
@@ -106,9 +106,31 @@
 }
 
 .aside{
+	ul{
+		@include media-breakpoint-down(lg) {
+			display: flex;
+			overflow-x: auto;
+		}
+	}
 	li{
+		@include media-breakpoint-down(lg) {
+			margin-right: 20px;
+			min-width: 230px;
+		}
 		list-style: none;
+		cursor: pointer;
 		margin-bottom: 20px;
+		&.active{
+			a{
+
+				color: $primary;
+			}
+		}
+		&:hover{
+			.icon{
+				color: $primary;
+			}
+		}
 		a{
 			display: flex;
 			align-items: center;
@@ -116,14 +138,7 @@
 			font-size: 14px;
 			position: relative;
 			color: $body-color;
-			&.active{
-				color: $primary;
-			}
-			&:hover{
-				.icon{
-					color: $primary;
-				}
-			}
+			pointer-events: none;
 			.icon{
 				@include mt;
 				font-size: 16px;
@@ -144,4 +159,8 @@
 		width: 100%;
 		margin-bottom: 20px;
 	}
+}
+
+.hidden-text{
+	display: none;
 }
