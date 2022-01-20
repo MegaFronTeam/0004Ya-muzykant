@@ -121,6 +121,9 @@
 		&__btn {
 			width: 100%;
 			padding: rem(13);
+			&:not(:hover){
+				background-color: #fff !important;
+			}
 		}
 		&__policy {
 			padding-top: rem(5);

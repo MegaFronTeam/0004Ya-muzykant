@@ -101,6 +101,10 @@
 			color: $primary;
 		}
 	}
+	li a{
+		color: #fff;
+	}
+	color: #fff;
 // 
 @include media-breakpoint-up(xl) {}
 

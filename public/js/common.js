@@ -326,6 +326,15 @@ function eventHandler() {
 		$(".hidden-text").slideToggle();
 	})
 
+	$(".catalog-block__toggle, .close-ul").click(function(){
+		$(".main-ul").toggleClass("active");
+		$('body').toggleClass("fixed")
+	})
+	$(".sExamples__btn").click(function(){
+		$(this).hide();
+		$('.sExamples__item-wrap:hidden').slideDown();
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

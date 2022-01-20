@@ -8,6 +8,12 @@
 		--sPB: #{rem(70)};
 		--sTPB: #{rem(34)};
 	}
+	&__item-wrap{
+		&:nth-child(n + 4) {
+			display: none;
+		}
+
+	}
 	&__item {
 		padding: rem(30) rem(20);
 		background-color: $white;
