@@ -16,17 +16,68 @@ mixin mob-mnu()
 			span
 		+e.inner
 			+mnu()
+			
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col.order-lg-0.order-last
+			.row.roww
+				.col-lg-auto.col
+					+e.logo(href="#")
+						img(src="img/logo.png", alt="")
+				.col-lg.order-lg-0.order-first
+					+b.search-block
+						form
+							input.form-control(type="text" placeholder="Поиск")
+							button 
+								+icon("search")
+				.col-auto
+					+e.link(href="#")
+						+e.icon-wrap: +icon('person') 
+						+e.link-caption.d-none.d-sm-block Войти
+				.col-auto
+					+e.link(href="#")
+						+e.icon-wrap: +icon('like') 
+						+e.link-caption.d-none.d-sm-block Избранное
+				.col-auto
+					+e.link(href="#")
+						+e.icon-wrap: +icon('cart') 
+						+e.link-caption.d-none.d-sm-block Корзина
+				+e.col.col-12
+				.col-lg-auto.col
+					+b.catalog-block
+						+e.toggle(href="#")
+							+e.gumburger
+								span
+							| Каталог
+
+
+				.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
+							+b.topLine.d-lg-none
+								.container 
+										.mb-2
+											+soc()
+										.col-auto
+											+e.text
+												+icon("clock")
+												| пн-пт: 9.00 - 18.00
+												
+										.mb-2
+											+e.text(href="mailto:zakaz@ya-muzykant.ru")
+												+icon("email")
+												| zakaz@ya-muzykant.ru
+										.mb-2
+											+e.text(href="tel:+7(499)704-02-80")
+												+icon("call-calling")
+												| +7 (499) 704-02-80
+
+										.mb-2
+											+e.btn(href="#") Заказать звонок
 					
 				.col-auto.d-lg-none
 					+menu-toggle()

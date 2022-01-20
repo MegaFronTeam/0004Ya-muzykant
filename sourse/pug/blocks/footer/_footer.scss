@@ -1,7 +1,106 @@
 .footer {
 		
 	margin-top: auto;
+	background: #352D29;
+	padding-top: rem(50);
+	padding-bottom: 26px;
+	margin: 0;
+	&__main-row{
+		--bs-gutter-x: 55px;
+	}
+	&__logo{
+		display: inline-block;
+		margin-bottom: 37px;
+	}
+	&__pay-item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		width: 75px;
+		background-color: #fff;
+		
+	}
+	&__row-pay{
+		max-width: 270px;
+		--bs-gutter-y: var(--bs-gutter-x);
+		margin-bottom: 30px;
+		.col-auto{
+			width: calc(100% / 3);
+		}
+	}
+	.menu{
+		display: block;
+		margin-top: 1rem;
+		columns: 2;
+		text-align: left;
+		--bs-gutter-x: 0;
+		li{
+			margin-bottom: 23px;
+			ul{
+				display: none !important;
+			}
+		}
+	}
+	.menu-item-has-children>a:after{
+		display: none;
+	}
 
+
+	&__text{
+		display: flex;
+		align-items: center;
+		letter-spacing: 0.02em;
+
+		color: #DEC6BB !important;
+		margin-bottom: 16px;
+		.icon{
+
+			font-size: 20px;
+			margin-right: 10px;
+			&-clock{
+				stroke: currentColor;
+				fill: none
+			}
+		}
+		// ]
+
+	}
+	&__row{
+		align-items: center;
+		display: flex;
+		margin-top: 30px;
+	}
+	&__btn{
+		@extend .btn-primary;
+		padding: 16px 20px;
+		display: inline-block;
+		white-space: nowrap
+	}
+
+	.soc{
+		@include roww(16px, m);
+		display: flex;
+		align-items: center;
+		&__item{
+			color: #fff;
+			display: inline-block;
+			.icon{
+
+				font-size: 24px;
+			}
+		}
+	}
+	&__copy{
+		border-top: 1px solid #645850;
+		margin-top: 40px;
+		padding-top: 24px;
+		text-align: center;
+		font-size: 12px;
+		a{
+			color: $primary;
+		}
+	}
 // 
 @include media-breakpoint-up(xl) {}
 

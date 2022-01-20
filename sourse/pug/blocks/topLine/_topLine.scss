@@ -1,6 +1,56 @@
 
 	// start .topLine
+
 	.topLine {
+		background: #5B473D; 
+		.row{
+			align-items: center;
+			&::before,
+			&::after{
+				display: none;
+			}
+		}
+		&__btn{
+
+		}
+		.soc{
+			@include roww(16px, m);
+			display: flex;
+			align-items: center;
+			&__item{
+				color: #fff;
+				display: inline-block;
+				.icon{
+
+					font-size: 24px;
+				}
+			}
+		}
+		&__text{
+			font-size: 14px;
+			line-height: 24px;
+			/* identical to box height, or 171% */
+
+			letter-spacing: 0.02em;
+
+			color: #DEC6BB;
+			align-items: center;
+			display: inline-flex;
+			.icon{
+				font-size: 20px;
+				margin-right: rem(10);
+				&-clock{
+					stroke: currentColor;
+					fill: none
+				}
+			}
+		}
+		&__btn{
+			@extend .btn-primary;
+			padding: rem(16) rem(25);
+			border-radius: 0;
+			display: inline-block;
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -26,4 +76,36 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+
+	@media (min-width: 576px) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {  }
+
+
+@media (max-width: 575.98px) {  }
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {  }
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {  }
+
 } // end.topLine
+
+

@@ -1,9 +1,40 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col
-				.col
+			+e.main-row.row.roww
 				.col-auto
+					+e.logo(href="#")
+						img(src="img/logo.png", alt="")
+					+e.row-pay.row.roww
+						- for (var x = 1; x < 8; x++)
+							.col-auto
+								+e.pay-item
+									img(src=`img/pay-${x}.png`, alt="")
+				.col-xl.order-xl-0.order-last
+					+mnu
+				.col-auto
+					.mb-2
+						+e.text
+							+icon("clock")
+							| пн-пт: 9.00 - 18.00
+					.mb-2
+						+e.text(href="mailto:zakaz@ya-muzykant.ru")
+							+icon("email")
+							| zakaz@ya-muzykant.ru
+					.mb-2
+						+e.text
+							+icon("location")
+							| г. Москва, Походный пр., 4, корп. 1
+					.mb-2
+						+e.text(href="tel:+7(499)704-02-80")
+							+icon("call-calling")
+							| +7 (499) 704-02-80
+					+e.row.row.roww
+						.col 
+							+soc()
+						
+						.col-lg-auto.col.text-end
+							+e.btn(href="#") Заказать звонок
+			+e.copy © 2021 «Я Музыкант» - Магазин музыкальных инструментов. Все права защищены. Копирование информации без указания источника преследуется законом.
+				br
+				a(href="#") Политика конфиденциальности

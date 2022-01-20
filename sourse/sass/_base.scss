@@ -555,9 +555,15 @@ iframe {
 .swiper-wrapper {
 	// @include row-sw(10px, sm, 100px);
 }
-
+.text-primary{
+	color: $primary;
+}
 .btn-primary {
 	color: $white !important;
+	background: $primary;
+	border-color: $primary;
+	border-radius: 2px;
+
 	&:hover {
 		background-color: #f2824d;
 		border-color: #f2824d;

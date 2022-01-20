@@ -10,41 +10,208 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="assets/yamuz/css/slick.css" rel="stylesheet"/>
 		<link href="assets/yamuz/css/slick-theme.css" rel="stylesheet"/>
+		<!-- не подключать на новой странице-->
 		<link href="assets/yamuz/css/st.min.css" rel="stylesheet"/>
+		<!-- /не подключать на новой странице-->
 		<link href="css/sprite.min.css" rel="stylesheet"/>
+		<!-- cтили  для шапки и  подвала-->
 		<link href="css/default.min.css" rel="stylesheet"/>
+		<!-- /cтили  для шапки и  подвала-->
+		<!-- cтили  для новое страницы-->
 		<link href="css/main.min.css" rel="stylesheet"/>
+		<!-- /cтили  для новое страницы-->
 	</head>
 	<body class="main-page">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start topLine-->
-				<section class="topLine section" id="topLine">
+				<div class="topLine d-none d-sm-block" id="topLine">
 					<div class="container">
-						<div class="section-title-base text-center">
-							<h2>topLine</h2>
+						<div class="row roww">
+							<div class="col d-none d-lg-block">
+								<div class="soc">
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-instagram ">
+											<use xlink:href="img/svg/sprite.svg#instagram"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-telegram ">
+											<use xlink:href="img/svg/sprite.svg#telegram"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-whatsapp ">
+											<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div class="topLine__text">
+									<svg class="icon icon-clock ">
+										<use xlink:href="img/svg/sprite.svg#clock"></use>
+									</svg>пн-пт: 9.00 - 18.00
+								</div>
+							</div>
+							<div class="col-auto">
+								<a class="topLine__text" href="mailto:zakaz@ya-muzykant.ru">
+									<svg class="icon icon-email ">
+										<use xlink:href="img/svg/sprite.svg#email"></use>
+									</svg>
+									<div class="d-none d-lg-inline">zakaz@ya-muzykant.ru</div>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="topLine__text" href="tel:+7(499)704-02-80">
+									<svg class="icon icon-call-calling ">
+										<use xlink:href="img/svg/sprite.svg#call-calling"></use>
+									</svg>
+									<div class="d-none d-lg-inline">+7 (499) 704-02-80</div>
+								</a>
+							</div>
+							<div class="col-lg-auto col text-end">
+								<a class="topLine__btn" href="#">Заказать звонок
+								</a>
+							</div>
 						</div>
-						<div class="row"></div>
 					</div>
-				</section>
+				</div>
 				<!-- end topLine-->
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
 					<div class="container">
-						<div class="row">
-							<div class="col order-lg-0 order-last">
+						<div class="row roww">
+							<div class="col-lg-auto col">
+								<a class="top-nav__logo" href="#"><img src="img/logo.png" alt=""/>
+								</a>
+							</div>
+							<div class="col-lg order-lg-0 order-first">
+								<div class="search-block">
+									<form>
+										<input class="form-control" type="text" placeholder="Поиск"/>
+										<button> 
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+									</form>
+								</div>
+							</div>
+							<div class="col-auto">
+								<a class="top-nav__link" href="#">
+									<div class="top-nav__icon-wrap">
+										<svg class="icon icon-person ">
+											<use xlink:href="img/svg/sprite.svg#person"></use>
+										</svg>
+									</div>
+									<div class="top-nav__link-caption d-none d-sm-block">Войти
+									</div>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="top-nav__link" href="#">
+									<div class="top-nav__icon-wrap">
+										<svg class="icon icon-like ">
+											<use xlink:href="img/svg/sprite.svg#like"></use>
+										</svg>
+									</div>
+									<div class="top-nav__link-caption d-none d-sm-block">Избранное
+									</div>
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="top-nav__link" href="#">
+									<div class="top-nav__icon-wrap">
+										<svg class="icon icon-cart ">
+											<use xlink:href="img/svg/sprite.svg#cart"></use>
+										</svg>
+									</div>
+									<div class="top-nav__link-caption d-none d-sm-block">Корзина
+									</div>
+								</a>
+							</div>
+							<div class="top-nav__col col-12">
+							</div>
+							<div class="col-lg-auto col">
+								<div class="catalog-block">
+									<a class="catalog-block__toggle" href="#">
+										<div class="catalog-block__gumburger"><span></span>
+										</div>Каталог
+									</a>
+								</div>
+							</div>
+							<div class="col-lg order-lg-0 order-last">
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
 										<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 										</div>
 										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+											<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О проекте</a>
+												<ul class="sub-menu">
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Строительство загородных домов</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Отделка загородных домов</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Покраска деревянных домов</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Штукатурные фасады загородных домов</a></li>
+												</ul>
+											</li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кредит и рассрочка</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Гарантия</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сервисные центры</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Обучение</a></li>
 										</ul>
+										<div class="topLine d-lg-none">
+											<div class="container"> 
+												<div class="mb-2">
+													<div class="soc">
+														<a class="soc__item" href="#" target="_blank">
+															<svg class="icon icon-instagram ">
+																<use xlink:href="img/svg/sprite.svg#instagram"></use>
+															</svg>
+														</a>
+														<a class="soc__item" href="#" target="_blank">
+															<svg class="icon icon-telegram ">
+																<use xlink:href="img/svg/sprite.svg#telegram"></use>
+															</svg>
+														</a>
+														<a class="soc__item" href="#" target="_blank">
+															<svg class="icon icon-whatsapp ">
+																<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="topLine__text">
+														<svg class="icon icon-clock ">
+															<use xlink:href="img/svg/sprite.svg#clock"></use>
+														</svg>пн-пт: 9.00 - 18.00
+													</div>
+												</div>
+												<div class="mb-2">
+													<a class="topLine__text" href="mailto:zakaz@ya-muzykant.ru">
+														<svg class="icon icon-email ">
+															<use xlink:href="img/svg/sprite.svg#email"></use>
+														</svg>zakaz@ya-muzykant.ru
+													</a>
+												</div>
+												<div class="mb-2">
+													<a class="topLine__text" href="tel:+7(499)704-02-80">
+														<svg class="icon icon-call-calling ">
+															<use xlink:href="img/svg/sprite.svg#call-calling"></use>
+														</svg>+7 (499) 704-02-80
+													</a>
+												</div>
+												<div class="mb-2">
+													<a class="topLine__btn" href="#">Заказать звонок
+													</a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1016,16 +1183,122 @@
 			<!-- end sContact-->
 			<footer class="footer">
 				<div class="container">
-					<div class="row">
-						<div class="col"></div>
-						<div class="col"></div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+					<div class="footer__main-row row roww">
+						<div class="col-auto">
+							<a class="footer__logo" href="#"><img src="img/logo.png" alt=""/>
+							</a>
+							<div class="footer__row-pay row roww">
+								<div class="col-auto">
+									<div class="footer__pay-item"><img src="img/pay-1.png" alt=""/>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="footer__pay-item"><img src="img/pay-2.png" alt=""/>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="footer__pay-item"><img src="img/pay-3.png" alt=""/>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="footer__pay-item"><img src="img/pay-4.png" alt=""/>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="footer__pay-item"><img src="img/pay-5.png" alt=""/>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="footer__pay-item"><img src="img/pay-6.png" alt=""/>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="footer__pay-item"><img src="img/pay-7.png" alt=""/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl order-xl-0 order-last">
+							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О проекте</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Строительство загородных домов</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Отделка загородных домов</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Покраска деревянных домов</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Штукатурные фасады загородных домов</a></li>
+									</ul>
+								</li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кредит и рассрочка</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Гарантия</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сервисные центры</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Обучение</a></li>
+							</ul>
+						</div>
+						<div class="col-auto">
+							<div class="mb-2">
+								<div class="footer__text">
+									<svg class="icon icon-clock ">
+										<use xlink:href="img/svg/sprite.svg#clock"></use>
+									</svg>пн-пт: 9.00 - 18.00
+								</div>
+							</div>
+							<div class="mb-2">
+								<a class="footer__text" href="mailto:zakaz@ya-muzykant.ru">
+									<svg class="icon icon-email ">
+										<use xlink:href="img/svg/sprite.svg#email"></use>
+									</svg>zakaz@ya-muzykant.ru
+								</a>
+							</div>
+							<div class="mb-2">
+								<div class="footer__text">
+									<svg class="icon icon-location ">
+										<use xlink:href="img/svg/sprite.svg#location"></use>
+									</svg>г. Москва, Походный пр., 4, корп. 1
+								</div>
+							</div>
+							<div class="mb-2">
+								<a class="footer__text" href="tel:+7(499)704-02-80">
+									<svg class="icon icon-call-calling ">
+										<use xlink:href="img/svg/sprite.svg#call-calling"></use>
+									</svg>+7 (499) 704-02-80
+								</a>
+							</div>
+							<div class="footer__row row roww">
+								<div class="col"> 
+									<div class="soc">
+										<a class="soc__item" href="#" target="_blank">
+											<svg class="icon icon-instagram ">
+												<use xlink:href="img/svg/sprite.svg#instagram"></use>
+											</svg>
+										</a>
+										<a class="soc__item" href="#" target="_blank">
+											<svg class="icon icon-telegram ">
+												<use xlink:href="img/svg/sprite.svg#telegram"></use>
+											</svg>
+										</a>
+										<a class="soc__item" href="#" target="_blank">
+											<svg class="icon icon-whatsapp ">
+												<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<div class="col-lg-auto col text-end">
+									<a class="footer__btn" href="#">Заказать звонок
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__copy">© 2021 «Я Музыкант» - Магазин музыкальных инструментов. Все права защищены. Копирование информации без указания источника преследуется законом.<br/><a href="#">Политика конфиденциальности</a>
 					</div>
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">

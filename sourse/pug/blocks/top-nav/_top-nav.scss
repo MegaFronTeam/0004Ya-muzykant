@@ -1,17 +1,44 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
-	@include media-breakpoint-up(xl) {
-		background-color: #000;
-		border: 1px solid #000;
-	}
+	background: #352D29;
+	padding-top: rem(18);
+	@media (min-width: 992px) {  
 
-	@include media-breakpoint-up(lg) {
-		background-color: red;
-
+		position: relative;
+		z-index: 1200;
 	}
-	p{
-		@include ell();
+	.roww{
+		--bs-gutter-x: 30px;
+	}
+	color: #fff;
+	&__link{
+		color: #fff;
+		font-size: 13px;
+		text-align: center;
+		.icon{
+			font-size: 24px;
+		}
+	}
+	a{
+		color: #fff;
+		&:hover{
+			color: $primary;
+		}
+	}
+	.row{
+		align-items: center;
+	}
+	&__col{
+		margin-top: 19px;
+		position: relative;
+		&::after{
+			content: '';
+			@include a-cent1(x);
+			top: 0;
+			border-top: 1px solid #645850;
+			width: 200vw;
+		}
 	}
 
 	@include media-breakpoint-up(md) {}
@@ -47,3 +74,68 @@
 }
 
 
+
+.catalog-block{
+	&__toggle{
+		position: relative;
+		@extend .btn-primary;
+			padding: rem(16) rem(25);
+			// padding-left: rem(44);
+			border-radius: 0;
+			// display: inline-block;
+			display: inline-flex;
+			align-items: center;
+	}
+	&__gumburger{
+		margin-right: rem(7);
+		--h: #{rem(2)};
+		--color: #{#fff};
+		--position: calc(var(--h) * 3);
+		&.on span {
+			--color: transparent;
+		}
+	
+		&.on  { 
+			--position: 0; 
+			--rotate: 45deg;
+		}
+		display: block;
+		height: calc(var(--h)* 12);
+		position: relative; 
+		font-size: 20px;
+		width: 1em;
+		cursor: pointer;
+		span:after,
+		span:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			border-radius: 10px;
+		} 
+		span {
+			@include a-cent(y);
+			display: block;
+		}
+	
+		span:before { 
+			top: var(--position);
+			transform: rotate3d(0,0,1, var(--rotate, 0));
+		}
+	
+		span:after {
+			bottom: var(--position);
+			transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+		}
+		span,
+		span:after,
+		span:before {
+			// width: 32px;
+			width: 1em;
+			height: var(--h);
+			background-color: var(--color);
+			transition: all 0.3s;
+			backface-visibility: hidden; 
+			transform-origin: 50% 50%;
+		} 
+	}
+}

@@ -3,10 +3,17 @@ mixin allcss()
 	link(href="libs/@fancyapps/ui/fancybox.css", rel="stylesheet")
 	link(href="assets/yamuz/css/slick.css", rel="stylesheet")
 	link(href="assets/yamuz/css/slick-theme.css", rel="stylesheet")
+	// не подключать на новой странице
 	link(href="assets/yamuz/css/st.min.css", rel="stylesheet")
+	// /не подключать на новой странице
 	link(href="css/sprite.min.css", rel="stylesheet")
+	// cтили  для шапки и  подвала
 	link(href="css/default.min.css", rel="stylesheet")
+	// /cтили  для шапки и  подвала
+
+	// cтили  для новое страницы
 	link(href="css/main.min.css", rel="stylesheet")
+	// /cтили  для новое страницы
 
 mixin allcjs() 
 	script(src="libs/jquery/jquery.min.js")
